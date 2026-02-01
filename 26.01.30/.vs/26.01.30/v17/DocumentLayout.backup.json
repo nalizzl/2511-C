@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C Code\\2511class\\26.01.30\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A9D8FDC2-F819-47DA-961D-FF6500FDD26F}|26.01.30\\26.01.30.vcxproj|D:\\C Code\\2511class\\26.01.30\\26.01.30\\project2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9D8FDC2-F819-47DA-961D-FF6500FDD26F}|26.01.30\\26.01.30.vcxproj|solutionrelative:26.01.30\\project2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9D8FDC2-F819-47DA-961D-FF6500FDD26F}|26.01.30\\26.01.30.vcxproj|D:\\C Code\\2511class\\26.01.30\\26.01.30\\project1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9D8FDC2-F819-47DA-961D-FF6500FDD26F}|26.01.30\\26.01.30.vcxproj|solutionrelative:26.01.30\\project1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9D8FDC2-F819-47DA-961D-FF6500FDD26F}|26.01.30\\26.01.30.vcxproj|D:\\C Code\\2511class\\26.01.30\\26.01.30\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A9D8FDC2-F819-47DA-961D-FF6500FDD26F}|26.01.30\\26.01.30.vcxproj|solutionrelative:26.01.30\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "project2.c",
+              "DocumentMoniker": "D:\\C Code\\2511class\\26.01.30\\26.01.30\\project2.c",
+              "RelativeDocumentMoniker": "26.01.30\\project2.c",
+              "ToolTip": "D:\\C Code\\2511class\\26.01.30\\26.01.30\\project2.c",
+              "RelativeToolTip": "26.01.30\\project2.c",
+              "ViewState": "AgIAAAwAAAAAAAAAAADgvxgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-01-30T12:45:15.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "project1.c",
+              "DocumentMoniker": "D:\\C Code\\2511class\\26.01.30\\26.01.30\\project1.c",
+              "RelativeDocumentMoniker": "26.01.30\\project1.c",
+              "ToolTip": "D:\\C Code\\2511class\\26.01.30\\26.01.30\\project1.c",
+              "RelativeToolTip": "26.01.30\\project1.c",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-01-30T11:59:57.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\C Code\\2511class\\26.01.30\\26.01.30\\test.c",
+              "RelativeDocumentMoniker": "26.01.30\\test.c",
+              "ToolTip": "D:\\C Code\\2511class\\26.01.30\\26.01.30\\test.c",
+              "RelativeToolTip": "26.01.30\\test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-01-30T11:01:36.529Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
