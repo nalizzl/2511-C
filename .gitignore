@@ -1,0 +1,17 @@
+# Visual Studio 编译缓存
+Debug/
+Release/
+x64/
+.vs/
+*.suo
+*.user
+*.pdb
+*.ilk
+*.exe
+*.tlog/
+*.lastbuildstate
+*.recipe
+
+# 临时文件
+*.tmp
+*.log
