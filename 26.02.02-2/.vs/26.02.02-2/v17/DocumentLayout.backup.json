@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C Code\\2511class\\2511-C\\26.02.02-2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4105E7A3-7EA9-46E2-A8AC-45A64E0599BD}|26.02.02-2\\26.02.02-2.vcxproj|D:\\C Code\\2511class\\2511-C\\26.02.02-2\\26.02.02-2\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4105E7A3-7EA9-46E2-A8AC-45A64E0599BD}|26.02.02-2\\26.02.02-2.vcxproj|solutionrelative:26.02.02-2\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\C Code\\2511class\\2511-C\\26.02.02-2\\26.02.02-2\\test.c",
+              "RelativeDocumentMoniker": "26.02.02-2\\test.c",
+              "ToolTip": "D:\\C Code\\2511class\\2511-C\\26.02.02-2\\26.02.02-2\\test.c*",
+              "RelativeToolTip": "26.02.02-2\\test.c*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-02-02T12:18:56.314Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
