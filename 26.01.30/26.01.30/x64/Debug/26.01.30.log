@@ -1,3 +1,10 @@
-﻿  project2.c
-D:\C Code\2511class\26.01.30\26.01.30\project2.c(27,3): warning C4013: “gets”未定义；假设外部返回 int
-  26.01.30.vcxproj -> D:\C Code\2511class\26.01.30\x64\Debug\26.01.30.exe
+﻿  project1.c
+  project2.c
+  test.c
+D:\C Code\2511class\2511-C\26.01.30\26.01.30\project2.c(24,3): warning C4013: “gets”未定义；假设外部返回 int
+D:\C Code\2511class\2511-C\26.01.30\26.01.30\project2.c(249,54): warning C4474: printf: 格式字符串中传递的参数太多
+      D:\C Code\2511class\2511-C\26.01.30\26.01.30\project2.c(249,54):
+      占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+  
+  正在生成代码...
+  26.01.30.vcxproj -> D:\C Code\2511class\2511-C\26.01.30\x64\Debug\26.01.30.exe
