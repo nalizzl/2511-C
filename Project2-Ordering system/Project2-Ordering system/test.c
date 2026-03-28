@@ -35,12 +35,19 @@ float billSettlement(Menu* dishMenu4, int dishTotal4);
 void managerLogin(Manager* managerList, int managerTotal2);
 void normalManager();
 void superManager();
+void menuUpdateInitial();
+void 	managerUpateInitial();
 
 
 int main()
 {
 	int choice1 = -1;
+	
 
+	//更新菜单
+	menuUpdateInitial();
+	//更新管理员名单
+	managerUpateInitial();
 	//1)登陆页面
 	while (choice1)
 	{

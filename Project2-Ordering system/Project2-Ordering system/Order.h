@@ -3,6 +3,12 @@
 #include<string.h>
 #include<stdlib.h>
 
+#ifdef _WIN32
+#include<io.h>
+#else
+#include<unistd.h>
+#endif
+
 typedef struct
 {
 	int id;//ÐòºÅ

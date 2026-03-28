@@ -15,8 +15,90 @@ void menuDisplayManager(Menu* dishMenu5, int dishTotal5);
 void menuUpdate(Menu* dishMenu6, int dishTotal6);
 void billDisplay();
 void managementAdministrator();
+void managerUpateInitial();
 
+//菜单文件
+void menuUpdateInitial()
+{
+	FILE* fpMenu = NULL;
+	Menu* pointerInitial = dishMenu;
+	int dishTotalCount = dishTotal;
 
+	//读取菜单
+	//菜单文件不存在
+	if (_access("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Menu.txt", 0) != 0)
+	{
+		//创建菜单
+		fpMenu = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Menu.txt", "w");
+		if (fpMenu == NULL)
+		{
+			perror("菜单创建失败！\n");
+			exit(1);
+		}
+		fprintf(fpMenu, "%d\n", dishTotal);
+		while (dishTotalCount--)
+		{
+			fprintf(fpMenu, "%d, %s, %.2f, %d, %.2f\n", pointerInitial->id, pointerInitial->dishName, pointerInitial->price, pointerInitial->inventory, pointerInitial->cost);
+			pointerInitial++;
+		}
+	}
+	//菜单文件存在
+	else
+	{
+		fpMenu = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Menu.txt", "r");
+		//更新菜单数组
+		fscanf(fpMenu, "%d", &dishTotal);
+		dishTotalCount = dishTotal;
+		while (dishTotalCount--)
+		{
+			fscanf(fpMenu, "%d, %s, %f, %d, %f", &pointerInitial->id, &pointerInitial->dishName, &pointerInitial->price, &pointerInitial->inventory, &pointerInitial->cost);
+			pointerInitial++;
+		}
+	}
+	fclose(fpMenu);
+}
+
+//管理员文件
+void managerUpateInitial()
+{
+
+	FILE* fpManager = NULL;
+	Manager* pointerInitial4 = restaurantManager;
+	int managerTotalCount = managerTotal;
+
+	//读取管理员管理员列表
+	//管理员文件不存在
+	if (_access("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Manager.txt", 0) != 0)
+	{
+		//创建管理员列表
+		fpManager = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Manager.txt", "w");
+		if (fpManager == NULL)
+		{
+			perror("菜单创建失败！\n");
+			exit(1);
+		}
+		fprintf(fpManager, "%d\n", managerTotal);
+		while (managerTotalCount--)
+		{
+			fprintf(fpManager, "%s, %s, %d\n", pointerInitial4->accountName, pointerInitial4->accountPassword, pointerInitial4 ->identity);
+			pointerInitial4++;
+		}
+	}
+	//管理员文件存在
+	else
+	{
+		fpManager = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Manager.txt", "r");
+		//更新管理员数组
+		fscanf(fpManager, "%d", &dishTotal);
+		managerTotalCount = dishTotal;
+		while (managerTotalCount--)
+		{
+			fscanf(fpManager, "%s, %s, %d\n", &pointerInitial4->accountName, &pointerInitial4->accountPassword, &pointerInitial4 ->identity);
+			pointerInitial4++;
+		}
+	}
+	fclose(fpManager);
+}
 
 
 
@@ -211,7 +293,9 @@ void orderChange(Menu* dishMenu3, int dishTotal3)
 //4.结算与账单生成
 float billSettlement(Menu* dishMenu4, int dishTotal4)
 {
+	FILE* fpMenu2 = NULL;
 	Menu* menuInital3 = dishMenu4;
+	Menu* pointerInitial2 = dishMenu4;
 	Bill* billGeneration2 = billGeneration;
 	FILE* fpBill = NULL;
 	int pointerMove = 0, bufferClear2 = 0;
@@ -242,6 +326,24 @@ float billSettlement(Menu* dishMenu4, int dishTotal4)
 	fprintf(fpBill, "总金额为：%.2f\n", totalAmount2);
 	fprintf(fpBill, "总利润为：%.2f\n", profitTotal);
 	fclose(fpBill);
+
+	//更新菜单	
+	//直接创建新菜单
+	fpMenu2 = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Menu.txt", "w");
+	if (fpMenu2 == NULL)
+	{
+		perror("菜单创建失败！\n");
+		exit(1);
+	}
+	fprintf(fpMenu2, "%d\n", dishTotal);
+	dishTotal4 = dishTotal;
+	while (dishTotal4--)
+	{
+		fprintf(fpMenu2, "%d, %s, %.2f, %d, %.2f\n", pointerInitial2->id, pointerInitial2->dishName, pointerInitial2->price, pointerInitial2->inventory, pointerInitial2->cost);
+		pointerInitial2++;
+	}
+	fclose(fpMenu2);
+	
 	return totalAmount2;
 }
 
@@ -426,7 +528,9 @@ void menuDisplayManager(Menu* dishMenu5, int dishTotal5)
 //2.更新菜单
 void menuUpdate(Menu* dishMenu6, int dishTotal6)
 {
+	FILE* fpMenu3 = NULL;
 	Menu* menuInitial6 = dishMenu6;
+	Menu* pointerInitial3 = dishMenu6;
 	Bill* billInitial6 = billGeneration;
 	int choice4 = -1, bufferClear2, originalId = 0, inventoryNew = 0, inventoryAdd = 0;
 	float dishPriceNew = 0, dishAddPrice = 0, dishAddCost = 0;
@@ -575,6 +679,21 @@ void menuUpdate(Menu* dishMenu6, int dishTotal6)
 			printf("输入有误！请重新输入：\n");
 		}
 	}
+	//直接创建新菜单
+	fpMenu3 = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Menu.txt", "w");
+	if (fpMenu3 == NULL)
+	{
+		perror("菜单创建失败！\n");
+		exit(1);
+	}
+	fprintf(fpMenu3, "%d\n", dishTotal);
+	dishTotal6 = dishTotal;
+	while (dishTotal6--)
+	{
+		fprintf(fpMenu3, "%d, %s, %.2f, %d, %.2f\n", pointerInitial3->id, pointerInitial3->dishName, pointerInitial3->price, pointerInitial3->inventory, pointerInitial3->cost);
+		pointerInitial3++;
+	}
+	fclose(fpMenu3);
 }
 
 
@@ -617,6 +736,9 @@ void managementAdministrator()
 	char accountAddName[20] = "";
 	char accountAddPassword[20] = "";
 	char* enterDelete3 = NULL;
+	Manager* pointerInitial5 = restaurantManager;
+	FILE* fpManager2 = NULL;
+	int managerTotalCount2 = managerTotal;
 
 	while (choice6)
 	{
@@ -738,5 +860,19 @@ void managementAdministrator()
 			printf("输入有误！请重新输入：\n");
 		}
 	}
+	//直接创建管理员列表
+	fpManager2 = fopen("D:\\C Code\\2511class\\2511-C\\Project2-Ordering system\\Project2-Ordering system\\Manager.txt", "w");
+	if (fpManager2 == NULL)
+	{
+		perror("菜单创建失败！\n");
+		exit(1);
+	}
+	fprintf(fpManager2, "%d\n", managerTotal);
+	while (managerTotalCount2--)
+	{
+		fprintf(fpManager2, "%s, %s, %d\n", pointerInitial5->accountName, pointerInitial5->accountPassword, pointerInitial5 ->identity);
+		pointerInitial5++;
+	}
+	fclose(fpManager2);
 }
 
